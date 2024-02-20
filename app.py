@@ -18,8 +18,12 @@ def main():
 @app.route("/image_gpt",methods=["GET","POST"])
 def image_gpt():
   r = request.form.get("r")
-  return(render_template("image_gpt.html",r=r))
+  return(render_template("image_gpt.html"))
 
+@app.route("/end",methods=["GET","POST"])
+def end():
+  first_time = 1
+  return(render_template("end.html"))
 
 if __name__=="__main__":
     app.run()
