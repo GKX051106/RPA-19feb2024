@@ -18,6 +18,9 @@ def main():
 
 @app.route("/image_gpt",methods=["GET","POST"])
 def image_gpt():
+
+
+  
   r = request.form.get("r")
   return(render_template("image_gpt.html"))
 
