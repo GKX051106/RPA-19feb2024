@@ -35,6 +35,7 @@ def image_result():
   
 @app.route("/end",methods=["GET","POST"])
 def end():
+  gobal first_time
   first_time = 1
   return(render_template("end.html"))
 
