@@ -61,7 +61,7 @@ def image_result():
     time.sleep(10)
     return(render_template("image_result.html",r=r[0]))
 
-@app.route("/reimage_gpt",methods=["GET","POST"])
+@app.route("/re_image_gpt",methods=["GET","POST"])
 def re_image_gpt():
     return(render_template("re_image_gpt.html"))
 @app.route("/re_image_result",methods=["GET","POST"])
