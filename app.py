@@ -74,7 +74,7 @@ def re_image_result():
         }
     )
     time.sleep(10)
-    return(render_template("image_re_result.html",r=r[0]))
+    return(render_template("re_image_result.html",r=r[0]))
 @app.route("/NTU",methods=["GET","POST"])
 def NTU():
     return(render_template("NTU.html"))
