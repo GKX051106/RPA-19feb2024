@@ -62,11 +62,18 @@ def image_result():
     time.sleep(10)
     return(render_template("image_result.html",r=r[0]))
 
+
+@app.route("/NTU",methods=["GET","POST"])
+def NTU():
+    return(render_template("NTU.html"))
+
+
 @app.route("/end",methods=["GET","POST"])
 def end():
     global first_time
     first_time = 1
     return(render_template("end.html"))
+
 
 if __name__ == "__main__":
     app.run()
