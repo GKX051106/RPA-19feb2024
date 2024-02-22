@@ -32,7 +32,12 @@ def text_result():
     q = request.form.get("q")
     r = model.chat.completions.create(
     model="gpt-3.5-turbo",
-    messages=[{"role":"user","content":q}],
+    messages=[
+        {
+            "role":"user",
+            "content":q
+        }
+    ],
 )
     
     time.sleep(5)
