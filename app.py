@@ -63,7 +63,7 @@ def image_result():
     return(render_template("image_result.html",r=r[0]))
 
 @app.route("/re_image_result",methods=["GET","POST"])
-def image_result():
+def re_image_result():
     q = request.form.get("q")
     r = replicate.run(
     "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf",
@@ -72,7 +72,7 @@ def image_result():
         }
     )
     time.sleep(10)
-    return(render_template("image_result.html",r=r[1]))
+    return(render_template("image_re_result.html",r=r[1]))
 @app.route("/NTU",methods=["GET","POST"])
 def NTU():
     return(render_template("NTU.html"))
