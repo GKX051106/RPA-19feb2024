@@ -58,7 +58,6 @@ def image_result():
         "prompt": q,
         }
     )
-    m=q
     time.sleep(10)
     return(render_template("image_result.html",r=r[0]))
 
