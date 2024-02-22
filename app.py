@@ -3,7 +3,7 @@ import replicate
 import os
 import time
 from openai import OpenAI
-
+global m
 
 openai_api_key=os.getenv("OPENAI_API_TOKEN")
 os.environ["REPLICATE_API_TOKEN"]="r8_Uh1JCGaGbackyghfdhi3ZFC6Hz1t6Ml2trhLC"
@@ -59,6 +59,7 @@ def image_result():
         "prompt": q,
         }
     )
+    m=q
     time.sleep(10)
     return(render_template("image_result.html",r=r[0]))
 
@@ -67,7 +68,7 @@ def re_image_result():
     r = replicate.run(
     "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf",
     input={
-        "prompt": q,
+        "prompt": m,
         }
     )
     time.sleep(10)
